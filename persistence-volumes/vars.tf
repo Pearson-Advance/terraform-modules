@@ -6,10 +6,10 @@ variable "instances_number" {
 variable "volume" {
   description = "Volume variables"
   default     = null
-  type        = list(object(
+  type        = object(
                   {
                     device_name = string
                     size        = string
                   }
-                ))
+                )
 }
