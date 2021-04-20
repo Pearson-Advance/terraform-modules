@@ -13,3 +13,16 @@ variable "volume" {
                   }
                 )
 }
+
+variable "instances" {
+  default     = null
+  description = "Instances output"
+
+  type = object(
+    {
+      ids = list(string)
+      tags = list(list(string))
+      availability_zone = list(string)
+    }
+  )
+}
