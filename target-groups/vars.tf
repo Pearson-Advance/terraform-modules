@@ -6,7 +6,7 @@ variable name {
 
 variable port {
   type        = number
-  default     = ""
+  default     = 80
   description = "target group port number"
 }
 
