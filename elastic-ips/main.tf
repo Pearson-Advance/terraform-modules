@@ -1,5 +1,5 @@
 resource "aws_eip_association" "eip_assoc" {
-  instance_id   = var.instace_id
+  instance_id   = var.instance_id
   allocation_id = aws_eip.public_ip.id
 }
 
