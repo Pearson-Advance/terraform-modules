@@ -21,7 +21,7 @@ variable "instances" {
   type = object(
     {
       ids = list(string)
-      tags = list(list(string))
+      tags = list(string)
       availability_zone = list(string)
     }
   )
