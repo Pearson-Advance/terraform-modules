@@ -1,5 +1,5 @@
 resource "aws_volume_attachment" "this_volume_attachment" {
-  count = var.instances_number
+  count = length(var.instances.ids)
 
   device_name = var.volume.device_name
   volume_id   = aws_ebs_volume.this_volume[count.index].id
@@ -7,7 +7,7 @@ resource "aws_volume_attachment" "this_volume_attachment" {
 }
 
 resource "aws_ebs_volume" "this_volume" {
-  count = var.instances_number
+  count = length(var.instances.ids)
 
   availability_zone = var.instances.availability_zone[count.index]
   size              = var.volume.size
